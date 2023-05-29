@@ -1,0 +1,29 @@
+:root{
+    --main-color-1:#aabc44;
+    --hover-color:#eef8b3;
+    
+}
+.banner-img .box-content-intro{ 
+    margin-top: 90px;
+}
+.banner-img .box-content-intro h4{
+    color: var(--main-color-1);
+}
+.common-section-2{
+    width: 900px;
+    margin: 0 auto;
+}
+#introduce {
+    position: relative;
+}
+.img-intro{
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+.img-intro-2{
+    position: absolute;
+    right: 2%;
+    top: 60%;
+    
+}
