@@ -3,6 +3,12 @@ include('connect.php');
 
 class data
 {
+    public function get_pages(){
+        global $conn;
+        $sql = "select * from pages order BY STT ASC";
+        $run = mysqli_query($conn, $sql);
+        return $run;
+    }
     public function login_user($user, $pass)
     { //login with email and password from user
         global $conn;

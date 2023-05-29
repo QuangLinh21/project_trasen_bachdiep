@@ -38,15 +38,22 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
                     <div class="col-md-7">
                         <nav>
                             <ul class="nav-parent">
-                                <li><a href="index1.php">TRANG CHỦ</a></li>
-                                <li><a href="#">GIỚI THIỆU</a></li>
-                                <li><a href="#">SẢN PHẨM</a></li>
-                                <li><a href="#">TIN TỨC </a></li>
-                                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <?php
+                                $get_pages = $get_data->get_pages();
+                                if ($get_pages != NULL) {
+                                    foreach ($get_pages as $gp) {
+                                ?>
+                                        <li><a href="<?php echo $gp['link']; ?>"><?php echo $gp['ten_trang']; ?></a></li>
+                                    <?php }
+                                } else { ?>
+                                    <p> KHÔNG CÓ DỮ LIỆU</p>
+                                <?php
+                                }
+                                ?>
                                 <?php if (!empty($idkh)) { ?>
                                     <li><a href="logout.php">LOGOUT</i></a></li>
                                 <?php } else { ?>
-                                    
+
                                     <li><a href="login.php"><i class="fa-solid fa-user"></i></a></li>
                                 <?php } ?>
                             </ul>
