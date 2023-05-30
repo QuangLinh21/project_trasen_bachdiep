@@ -1,0 +1,27 @@
+#banner img{
+   width: 100%;
+   height: auto;
+   position: relative;
+}
+#banner h3{
+    position: absolute;
+    top: 35%;
+    left: 42%;
+}
+#list-product .products .title p{
+    opacity: 0.5;
+    font-size: 14px;
+}
+.box-product .box-title{
+    opacity: 0.5;
+    font-size: 14px;
+}
+.box-product .box-title select{
+   height: 30px;
+   border: solid 1px black;
+   border-radius: 3px;
+   outline: none;
+}
+.first-select .form-check label{
+    opacity: 0.5;
+}

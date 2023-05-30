@@ -144,17 +144,7 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
       <img src="./Pictures/trang-chu/fotter-tea.png" alt="">
     </div>
   </section>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="./common/slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $(".vertical-center").slick({
-        dots: false,
-        vertical: true,
-        centerMode: true,
-      });
-    });
-  </script>
+ 
 </body>
 
 </html>
