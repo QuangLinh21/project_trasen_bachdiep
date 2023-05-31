@@ -25,3 +25,25 @@
 .first-select .form-check label{
     opacity: 0.5;
 }
+.product-item{
+    width: 200px;
+    margin: 20px;
+    cursor: pointer;
+}
+.product-item .item-title .box-star{
+   font-size: 10px;
+   color: #69922B;
+}
+.product-item .item-title p{
+    font-size: 12px;
+    padding: 3px;
+    background-color: #D4F59B;
+}
+.product-item select{
+    border: none;
+    margin-top: -13px;
+    outline: none;
+}
+.page-item nav ul li a{
+    color: black;
+}

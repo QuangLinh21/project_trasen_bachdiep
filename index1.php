@@ -198,45 +198,52 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
       </div>
     </div>
   </section>
-  <section id="footer">
-    <div class="container-fluid">
-      <div class="row common-section d-flex justify-content-center p-4">
-        <div class="col-md-4 ">
-          <h4><img src="./Pictures/trang-chu/logophongtra.png" alt=""></h4>
-          <ul>
-            <li><a href="#"><i class="fa-solid fa-phone-volume"></i>: 0999999999</a></li>
-            <li><a href="#"><i class="fa-solid fa-envelope"></i>: trasenbichdiep@gmail.com</a></li>
-            <li><a href="#"><i class="fa-solid fa-house"></i>: Số 12, Tây Hồ Hà Nội</a></li>
-          </ul>
+  <!-- ------------------------footer------------------------------- -->
+  <section id="footer" class="ft">
+        <div class="container-fluid">
+            <div class="row common-section d-flex justify-content-center p-4">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div>
+                        <h4><img src="./Pictures/trang-chu/logophongtra.png" alt=""></h4>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-phone-volume"></i>: 0999999999</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i>: trasenbichdiep@gmail.com</a></li>
+                            <li><a href="#"><i class="fa-solid fa-house"></i>: Số 12, Tây Hồ Hà Nội</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 d-flex justify-content-center">
+                    <div>
+                        <h4>VỀ CHÚNG TÔI</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Sản phẩm</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 d-flex justify-content-center">
+                    <div>
+                        <h4>LIÊN HỆ</h4>
+                    <ul>
+                        <li><a href="#">
+                                <ul class="d-flex ">
+                                    <li class="me-2"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li class="me-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
+                            </a></li>
+                        <li><a href="#">Nguyễn Quang Linh</a></li>
+                        <li><a href="#">Mỹ Hào - Hưng Yên</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mt-4">
-          <h4>VỀ CHÚNG TÔI</h4>
-          <ul>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Sản phẩm</a></li>
-            <li><a href="#">Tin tức</a></li>
-          </ul>
+        <div class="footer-img">
+            <img src="./Pictures/trang-chu/fotter-tea.png" alt="">
         </div>
-        <div class="col-md-4 mt-4">
-          <h4>LIÊN HỆ</h4>
-          <ul>
-            <li><a href="#">
-                <ul class="d-flex ">
-                  <li class="me-2"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                  <li class="me-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>
-              </a></li>
-            <li><a href="#">Nguyễn Quang Linh</a></li>
-            <li><a href="#">Mỹ Hào - Hưng Yên</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-img">
-      <img src="./Pictures/trang-chu/fotter-tea.png" alt="">
-    </div>
-  </section>
+    </section>
 </body>
 
 </html>
