@@ -23,7 +23,14 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
     <link rel="stylesheet" href="./style/style.css">
     <title>Document</title>
 </head>
-
+<style>
+    #banner-section .banner-img .box-content{
+    position: absolute;
+    top: 0rem;
+    margin-left: 250px ;
+    
+}
+</style>
 <body>
     <!-- --------------------------------menu------------------------------- -->
     <section id="menu-section">
@@ -67,11 +74,19 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
     <!-- ---------------------Banner------------------------------->
     <section id="banner-section">
         <div class="banner-img">
-            <img src="./Pictures/trang-chu/banner.png" alt="" style="width: 100%;" srcset="">
+            <img src="./Pictures/trang-chu/backBanner.png" alt="" style="width: 100%;" srcset="">
             <div class="box-content">
-                <form action="" class="mt-5 pt-5" method="post">
+                <form action="" class="" method="post">
                     <h2 class="mt-3 text-danger ms-5 ps-5">Đăng nhập</h2>
                     <table>
+                        <tr>
+                            <td><label for="hoten">Họ và tên</label></td>
+                            <td> <input type="text" class="form-control ms-3 mt-2" name="hoten" id="hoten"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td> <input type="email" class="form-control ms-3 mt-2" name="email" id="email"></td>
+                        </tr>
                         <tr>
                             <td><label for="user">Tên đăng nhập</label></td>
                             <td> <input type="text" class="form-control ms-3 mt-2" name="username" id="user"></td>
@@ -81,25 +96,24 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
                             <td><input type="password" class="form-control ms-3 mt-2" name="password" id="mk"></td>
                         </tr>
                         <tr>
-                            <td><a href="./register.php" class="btn btn-warning mt-4 ms-3 p-2">Đăng ký</a></td>
-                            <td><input type="submit" name="btn" class="btn btn-success mt-4 p-2" value="Đăng nhập"></td>
+                            <td><input type="submit" name="btn" class="btn btn-success mt-4 ms-3 p-2 ps-4 pe-4" value="Đăng ký"></td>
                         </tr>
                     </table>
                 </form>
                 <?php
+                $quyen=2;
                 if (isset($_POST["btn"])) {
                     if (empty($_POST["username"]) || empty($_POST["password"])) {
                         echo ("<script>alert('Không được để trống');</script>");
                     } else {
-                        $login = $get_data->login($_POST["username"], $_POST["password"]);
-                        if ($login == 1) {
-                            $_SESSION["username"] = $_POST["username"];
-                            $_SESSION["password"] = $_POST["password"]; ?>
+                        $register = $get_data->register($_POST["hoten"],$_POST["email"],$_POST["username"], $_POST["password"],$quyen);
+                        if ($register == 1) {
+                             ?>
                             <script>
-                                location.href = 'index1.php';
+                                location.href = 'login.php';
                             </script> <?php
                                     } else
-                                        echo ("<script>alert('login that bai!!!');</script>");
+                                        echo ("<script>alert('Đăng ký không thành công!!!');</script>");
                                 }
                             }
 

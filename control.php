@@ -3,6 +3,13 @@ include('connect.php');
 
 class data
 {
+    public function register($hoten,$email,$username,$password,$quyen){
+        global $conn;
+        $sql = "insert into user (hoten,email,username,password,quyen)
+        values('$hoten','$email','$username','$password',$quyen)";
+        $run = mysqli_query($conn, $sql);
+        return $run;
+    }
     public function get_pages(){
         global $conn;
         $sql = "select * from pages order BY STT ASC";
