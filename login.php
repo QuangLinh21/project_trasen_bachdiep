@@ -82,28 +82,44 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
                         </tr>
                         <tr>
                             <td><a href="./register.php" class="btn btn-warning mt-4 ms-3 p-2">Đăng ký</a></td>
-                            <td><input type="submit" name="btn" class="btn btn-success mt-4 p-2" value="Đăng nhập"></td>
+                            <td><input type="submit" name="sbm" class="btn btn-success mt-4 p-2" value="Đăng nhập"></td>
                         </tr>
                     </table>
                 </form>
                 <?php
-                if (isset($_POST["btn"])) {
+                if (isset($_POST["sbm"])) {
                     if (empty($_POST["username"]) || empty($_POST["password"])) {
                         echo ("<script>alert('Không được để trống');</script>");
                     } else {
                         $login = $get_data->login($_POST["username"], $_POST["password"]);
                         if ($login == 1) {
                             $_SESSION["username"] = $_POST["username"];
-                            $_SESSION["password"] = $_POST["password"]; ?>
-                            <script>
-                                location.href = 'index1.php';
-                            </script> <?php
-                                    } else
-                                        echo ("<script>alert('login that bai!!!');</script>");
-                                }
+                            $_SESSION["password"] = $_POST["password"];
+                            $get = $get_data->login_user($_POST["username"], $_POST["password"]);
+                            foreach ($get as $se) {
+                                $quyen = $se["quyen"];
+                                $_SESSION["quyen"] = $se["quyen"];
+                                $_SESSION["username"] = $se["username"];
                             }
 
-                                        ?>
+                            if ($quyen == 1) { ?>
+                                <script>
+                                    location.href = 'admin.php';
+                                </script>
+                            <?php
+                            } else { ?>
+                                <script>
+                                    
+                                    location.href = 'index1.php';
+                                </script>
+                <?php
+                            }
+                        } else
+                            echo ("<script>alert('login that bai!!!');</script>");
+                    }
+                }
+
+                ?>
             </div>
         </div>
     </section>

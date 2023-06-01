@@ -23,6 +23,12 @@ class data
         $run = mysqli_query($conn, $sql);
         return $run;
     }
+    public function get_quyen($user){
+        global $conn;
+        $sql="select * from user where user='$user'";
+        $run=mysqli_query($conn,$sql);
+        return $run;
+    }
     public function login($user, $pass)
     { //login with email and password from user
         global $conn;
