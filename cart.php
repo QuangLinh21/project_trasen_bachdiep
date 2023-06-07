@@ -95,7 +95,7 @@ if (!empty($_SESSION["username"]) && !empty($_SESSION["password"])) {
                 </tr>
                 <?php
                 }
-                ?>                
+                ?>              
               </table>
               <div class="d-flex justify-content-between link mt-5" >
                 <a href="index1.php">Tiếp tục xem sản phẩm</a>
